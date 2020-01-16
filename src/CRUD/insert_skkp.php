@@ -22,11 +22,11 @@ if($_SESSION['status'] !="login"){
     </p>
   </header>
   <body>
-    <form class="" action="inputb_bb.php" method="post">
+    <form class="" action="input_skkp.php" method="post">
       <div class="form-group">
       <label id="name-label" for="name">No. Surat Keputusan Kenaikan Pangkat</label>
       <input 
-      type="number" 
+      type="varchar" 
       name="no_skkp"
       class="form-control" 
       placeholder="nomor skkp"
@@ -38,10 +38,10 @@ if($_SESSION['status'] !="login"){
       <div class="form-group">
       <label id="name-label" for="name">Tanggal SKKP</label>
       <input 
-      type="number" 
+      type="datetime" 
       name="tanggal_skkp"
       class="form-control" 
-      placeholder="00-00-0000"
+      placeholder="yy-dd-mmmm"
       required 
       />
 
@@ -50,10 +50,10 @@ if($_SESSION['status'] !="login"){
       <div class="form-group">
       <label id="name-label" for="name">Tanggal Mulai Tugas - Lama</label>
       <input 
-      type="number" 
+      type="datetime" 
       name="tmt_lama"
       class="form-control" 
-      placeholder="00-00-0000"
+      placeholder="yy-dd-mmmm"
       required 
       />
 
@@ -62,10 +62,10 @@ if($_SESSION['status'] !="login"){
       <div class="form-group">
       <label id="name-label" for="name">Tanggal Mulai Tugas - Baru</label>
       <input 
-      type="number" 
+      type="datetime" 
       name="tmt_baru"
       class="form-control" 
-      placeholder="00-00-0000"
+      placeholder="yy-dd-mmmm"
       required 
       />
 

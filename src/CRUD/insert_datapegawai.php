@@ -22,7 +22,7 @@ if($_SESSION['status'] !="login"){
     </p>
   </header>
   <body>
-    <form class="" action="inputb_bb.php" method="post">
+    <form class="" action="input_datapegawai.php" method="post">
       <div class="form-group">
       <label id="name-label" for="name">Nomor Induk Pegawai</label>
       <input 
@@ -39,7 +39,7 @@ if($_SESSION['status'] !="login"){
       <label id="name-label" for="name">Nama</label>
       <input 
       type="text" 
-      name="nama"
+      name="nama_pegawai"
       class="form-control" 
       placeholder="nama"
       required 
@@ -138,10 +138,10 @@ if($_SESSION['status'] !="login"){
       <div class="form-group">
       <label id="name-label" for="name">Tanggal Pengangkatan</label>
       <input 
-      type="text" 
+      type="datetime" 
       name="tgl_pengangkatan"
       class="form-control" 
-      placeholder="00-00-0000"
+      placeholder="yy-dd-mmmm"
       required 
       />
 
@@ -150,10 +150,10 @@ if($_SESSION['status'] !="login"){
       <div class="form-group">
       <label id="name-label" for="name">Tanggal Mulai Tugas</label>
       <input 
-      type="text" 
+      type="datetime" 
       name="tmt"
       class="form-control" 
-      placeholder="00-00-0000"
+      placeholder="yy-dd-mmmm"
       required 
       />
 

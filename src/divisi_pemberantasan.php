@@ -7,334 +7,352 @@ if($_SESSION['status'] !="login"){
 header("location:login.php");
 }
 
-// menampilkan pesan selamat datang
-echo "Hai, selamat datang ". $_SESSION['username'];
-
  ?>
 <!DOCTYPE html>
-<!--
-* CoreUI - Free Bootstrap Admin Template
-* @version v2.1.15
-* @link https://coreui.io
-* Copyright (c) 2018 creativeLabs Łukasz Holeczek
-* Licensed under MIT (https://coreui.io/license)
--->
-
 <html lang="en">
-  <head>
-    <base href="./">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
-    <meta name="author" content="Łukasz Holeczek">
-    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>Badan Narkotika Nasional</title>
-    <!-- Icons-->
-    <link rel="icon" type="image/ico" href="./img/Logo_BNN.png" sizes="any" />
-    <link href="node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
-    <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
-    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-    <!-- Main styles for this application-->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics-->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      // Shared ID
-      gtag('config', 'UA-118965717-3');
-      // Bootstrap ID
-      gtag('config', 'UA-118965717-5');
-    </script>
-  </head>
-  <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
-    <header class="app-header navbar">
-      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand">
-        <img class="navbar-brand-full" src="img/brand/BNN2.png" width="130" height="40">
-        <img class="navbar-brand-minimized" src="img/brand/sygnet.svg" width="30" height="30" alt="CoreUI Logo">
-      </a>
-      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <ul class="nav navbar-nav d-md-down-none">
-        <li class="nav-item px-3">
-          <a class="nav-link">Divisi Umum</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link">Divisi P2M</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link">Divisi Rehabilitasi</a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link" href="divisi_pemberantasan.php">Divisi Pemberantasan</a>
-        </li>
-      </ul>
-        <main class="main">
-        <div class="breadcrumb-menu d-md-down-none">
-          <div class="btn-group" role="group" aria-label="Button group">
-            <a class="btn">
-              <i class="icon-speech"></i>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/Logo_BNN.png">
+  <title>
+    Badan Narkotika Nasional
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="../src/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../src/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper">
+    <div class="sidebar">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
+    -->
+      <div class="sidebar-wrapper">
+        
+        <ul class="nav">
+          <li class="active ">
+            <a href="./CRUD/insert_tsk.php">
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p><h4>Tersangka</h4></p>
             </a>
-            <a class="btn">
-              <i class="icon-settings"></i></a>
+          </li>
+          <li>
+            <a href="./CRUD/insertb_bb.php">
+              <i class="tim-icons icon-atom"></i>
+              <p><h4>Barang Bukti</h4></p>
+            </a>
+          </li>
+          <li>
+            <a href="./CRUD/insert.php">
+              <i class="tim-icons icon-bell-55"></i>
+              <p><h4>LKN</h4></p>
+            </a>
+          </li>
+          <li>
+            <a href="./map.html">
+              <i class="tim-icons icon-pin"></i>
+              <p><h4>Maps</h4></p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle d-inline">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="divisi_pemberantasan.php">BNNK SURABAYA</a>
           </div>
-        </div>
-    </main>
-    <main class="main">
-    <div class="breadcrumb-menu d-md-down-none">
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+
       <div class="btn-group" role="group" aria-label="Button group">
-        <a class="btn">
-          <i class="icon-speech"></i>
-        </a>
         <a class="btn" href="homepage.php">
           <i class="icon-settings"></i>LOGOUT</a>
       </div>
-    </div>
-</main>
-      </ul>
-      <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item d-md-down-none">
-          <a class="nav-link" href="#">
-            <i class="icon-list"></i>
-          </a>
-        </li>
-      </ul>
-      <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </header>
-    <div class="app-body">
-      <div class="sidebar">
-        <nav class="sidebar-nav">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link">
-                <i class="nav-icon icon-speedometer"></i> Dashboard
-              </a>
-            </li>
-            <li class="nav-title">Data</li>
-            <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="./CRUD/insert.php">
-                <i class="nav-icon icon-puzzle"></i> LKN</a>
-              <ul class="nav-dropdown-items">
 
-              </ul>
-            </li>
-            <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="./CRUD/insert_tsk.php">
-                <i class="nav-icon icon-cursor"></i>Tersangka</a>
-              <ul class="nav-dropdown-items">
-
-              </ul>
-            </li>
-            <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="./CRUD/insertb_bb.php">
-                <i class="nav-icon icon-star"></i>Barang Bukti</a>
-              <ul class="nav-dropdown-items">
-
-              </ul>
-            </li>
-            <li class="nav-item nav-dropdown">
-              <a class="nav-link nav-dropdown-toggle" href="#">
-                <i class="nav-icon icon-bell"></i>Pemetaan</a>
-              <ul class="nav-dropdown-items">
-
-              </ul>
-            </li>
-          </ul>
-        </nav>
+        </div>
+      </nav>
+      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="tim-icons icon-simple-remove"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <main class="main">
-        <!-- Breadcrumb-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item active">DIVISI PEMBERANTASAN</li>
-          <!-- Breadcrumb Menu-->
-          <li class="breadcrumb-menu d-md-down-none">
-            <div class="btn-group" role="group" aria-label="Button group">
-              <a class="btn">
-                <i class="icon-speech"></i>
-              </a>
-            </div>
-          </li>
-        </ol>
-        <div class="container-fluid">
-          <div class="animated fadeIn">
-            <div class="row">
-              <div class="col-sm-6 col-lg-3">
-                <div class="card text-white bg-primary">
-                  <div class="card-body pb-0">
-                    <div class="btn-group float-right">
-                      <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon-settings"></i>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </div>
-                    <div class="text-value">9.823</div>
-                    <div>Members online</div>
-                  </div>
-                  <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
-                    <canvas class="chart" id="card-chart1" height="70"></canvas>
-                  </div>
-                </div>
-              </div>
-              <!-- /.col-->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card text-white bg-info">
-                  <div class="card-body pb-0">
-                    <button class="btn btn-transparent p-0 float-right" type="button">
-                      <i class="icon-location-pin"></i>
-                    </button>
-                    <div class="text-value">9.823</div>
-                    <div>Members online</div>
-                  </div>
-                  <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
-                    <canvas class="chart" id="card-chart2" height="70"></canvas>
-                  </div>
-                </div>
-              </div>
-              <!-- /.col-->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card text-white bg-warning">
-                  <div class="card-body pb-0">
-                    <div class="btn-group float-right">
-                      <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon-settings"></i>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </div>
-                    <div class="text-value">9.823</div>
-                    <div>Members online</div>
-                  </div>
-                  <div class="chart-wrapper mt-3" style="height:70px;">
-                    <canvas class="chart" id="card-chart3" height="70"></canvas>
-                  </div>
-                </div>
-              </div>
-              <!-- /.col-->
-              <div class="col-sm-6 col-lg-3">
-                <div class="card text-white bg-danger">
-                  <div class="card-body pb-0">
-                    <div class="btn-group float-right">
-                      <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon-settings"></i>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </div>
-                    <div class="text-value">9.823</div>
-                    <div>Members online</div>
-                  </div>
-                  <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
-                    <canvas class="chart" id="card-chart4" height="70"></canvas>
-                  </div>
-                </div>
-              </div>
-              <!-- /.col-->
-            </div>
-            <!-- /.row-->
-            <div class="card">
-              <div class="card-body">
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-chart">
+              <div class="card-header ">
                 <div class="row">
-                  <div class="col-sm-5">
-
-                     <form action="divisi_pemberantasan.php" method="get">
-                       <label>Cari :</label>
-                       <input type="text" name="id_lkn">
-                       <input type="submit" name="cari" value="Cari">
-                     </form>
+                  <div class="col-sm-6 text-left">
+                    <h5 class="card-category"></h5>
+                    <h2 class="card-title"></h2>
+                  </div>
+                  
 
                      <?php
                      require './CRUD/koneksi.php';
 
-                     if(isset($_GET['cari'])){
-                       $cari = $_GET['cari'];
-                       echo "<b>Hasil pencarian : ".$cari."</b>";
-                     }
+                     if(isset($_GET['cari']))
                      ?>
 
-                     <table border="1">
+                     <table border="3">
                        <tr>
-                         <th>No</th>
+                         
                          <th>Id laporan kejadian narkotika</th>
                          <th>Tanggal</th>
                          <th>Tempat kejadian perkara</th>
+                         <th>Nama Tersangka</th>
                          <th>Pasal</th>
                          <th>Modus operandi</th>
                          <th>Jumlah BB</th>
                          <th>Satuan BB</th>
+                         <th>Asal Barang</th>
+                         <th>Id Petugas</th>
+                         <th>Id Barang Bukti</th>
+                         <th>Id Tersangka</th>
                          <th colspan="2"> aksi</th>
                        </tr>
                        <?php
-                       if(isset($_GET['cari'])){
-                         $cari = $_GET['id_lkn'];
-                         $data = mysqli_query( $koneksi,"SELECT*FROM tb_lkn where id_lkn like '%".$cari."%'");
-                       }else{
-                         $data = mysqli_query($koneksi, "SELECT*FROM tb_lkn");
-                       }
-                       $no = 1;
-                       while($d = mysqli_fetch_array($data)){
-                       ?>
-                       <tr>
-                         <td><?php echo $no++; ?></td>
-                         <td><?php echo $d['id_lkn']; ?></td>
-                         <td><?php echo $d['tgl_lkn']; ?></td>
-                         <td><?php echo $d['tkp_lkn']; ?></td>
-                         <td><?php echo $d['pasal_lkn']; ?></td>
-                         <td><?php echo $d['modus_operandi_lkn']; ?></td>
-                         <td><?php echo $d['jumlah_bb_lkn']; ?></td>
-                         <td><?php echo $d['satuan_bb_lkn']; ?></td>
-                        <td><a href="CRUD/hapus_lkn.php?d=<?= $data['id_lkn'] ?>">Hapus</a>
-                        || <a href="CRUD/edit.php?d=<?= $data['id_lkn'] ?>">Edit</a></td>
-                       </tr>
-                       <?php } ?>
-                  </div>
-                  <!-- /.col-->
-                  <!-- /.col-->
+                  require_once 'CRUD/koneksi.php';
+                  $con=mysqli_query($koneksi, "SELECT*FROM tb_lkn");
+                  while ($data =mysqli_fetch_array($con)) {
+                  ?>
+                  <tr>
+                    <td><?php echo $data['id_lkn']?></td>
+                    <td><?php echo $data['tgl_lkn']?></td>
+                    <td><?php echo $data['tkp_lkn']?></td>
+                    <td><?php echo $data['nama_tsk']?></td>
+                    <td><?php echo $data['pasal_lkn']?></td>
+                    <td><?php echo $data['modus_operandi_lkn']?></td>
+                    <td><?php echo $data['jumlah_bb_lkn']?></td>
+                    <td><?php echo $data['satuan_bb_lkn']?></td>
+                    <td><?php echo $data['asal_barang_lkn']?></td>
+                    <td><?php echo $data['id_petugas']?></td>
+                    <td><?php echo $data['id_bb']?></td>
+                    <td><?php echo $data['id_tsk']?></td>
+                    <td><a href="CRUD/hapus_lkn.php?d=<?= $data['id_lkn'] ?>">Hapus</a> || <a href="CRUD/edit_lkn.php?d=<?= $data['id_lkn'] ?>">Edit</a></td>
+                  </tr>
+                <?php } ?>
                 </div>
-                <!-- /.row-->
-                <div class="chart-wrapper" style="height:300px;margin-top:40px;">
-                  <canvas class="chart" id="main-chart" height="300"></canvas>
+              </table>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="chartBig1"></canvas>
                 </div>
               </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="chartBig1"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      </main>
-
+      
     </div>
-    <footer class="app-footer">
+  </div>
+  <div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+      <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+      </a>
+      <ul class="dropdown-menu">
+        <li class="header-title"> Sidebar Background</li>
+        <li class="adjustments-line">
+          <a href="javascript:void(0)" class="switch-trigger background-color">
+            <div class="badge-colors text-center">
+              <span class="badge filter badge-primary active" data-color="primary"></span>
+              <span class="badge filter badge-info" data-color="blue"></span>
+              <span class="badge filter badge-success" data-color="green"></span>
+            </div>
+            <div class="clearfix"></div>
+          </a>
+        </li>
+        <li class="adjustments-line text-center color-change">
+          <span class="color-label">LIGHT MODE</span>
+          <span class="badge light-badge mr-2"></span>
+          <span class="badge dark-badge ml-2"></span>
+          <span class="color-label">DARK MODE</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../src/js_dashboard/core/jquery.min.js"></script>
+  <script src="../src/js_dashboard/core/popper.min.js"></script>
+  <script src="../src/js_dashboard/core/bootstrap.min.js"></script>
+  <script src="../src/js_dashboard/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../src/js_dashboard/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../src/js_dashboard/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../src/js_dashboard/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../src/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+        $navbar = $('.navbar');
+        $main_panel = $('.main-panel');
 
-    </footer>
-    <!-- CoreUI and necessary plugins-->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules/pace-progress/pace.min.js"></script>
-    <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
-    <script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
-    <!-- Plugins and scripts required by this view-->
-    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
-    <script src="node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+        sidebar_mini_active = true;
+        white_color = false;
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+        $('.fixed-plugin a').click(function(event) {
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .background-color span').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data', new_color);
+          }
+
+          if ($main_panel.length != 0) {
+            $main_panel.attr('data', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data', new_color);
+          }
+        });
+
+        $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            sidebar_mini_active = false;
+            blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+          } else {
+            $('body').addClass('sidebar-mini');
+            sidebar_mini_active = true;
+            blackDashboard.showSidebarMessage('Sidebar mini activated...');
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+        });
+
+        $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (white_color == true) {
+
+            $('body').addClass('change-background');
+            setTimeout(function() {
+              $('body').removeClass('change-background');
+              $('body').removeClass('white-content');
+            }, 900);
+            white_color = false;
+          } else {
+
+            $('body').addClass('change-background');
+            setTimeout(function() {
+              $('body').removeClass('change-background');
+              $('body').addClass('white-content');
+            }, 900);
+
+            white_color = true;
+          }
+
+
+        });
+
+        $('.light-badge').click(function() {
+          $('body').addClass('white-content');
+        });
+
+        $('.dark-badge').click(function() {
+          $('body').removeClass('white-content');
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+    });
+  </script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "black-dashboard-free"
+      });
+  </script>
+</body>
+
 </html>

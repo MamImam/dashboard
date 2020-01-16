@@ -7,27 +7,124 @@ if($_SESSION['status'] !="login"){
   header("location:index.php");
 }
 
-// menampilkan pesan selamat datang
-echo "Hai, selamat datang ". $_SESSION['username'];
- ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>data Kegiatan</title>
-  </head>
+  <link rel="stylesheet" type="text/css" href="../css/styleform.css">
+<div class="container">
+  <header class="header">
+    <title>Badan Narkotika Nasional</title>
+    <link rel="icon" type="image/ico" href="./img/Logo_BNN.png" sizes="any" />
+
+    <h1 id="title" class="text-center">DIVISI P2M</h1>
+    <p id="description" class="description text-center">
+      Silahkan Masukkan Data!
+    </p>
+  </header>
   <body>
     <form class="" action="input_kegiatan.php" method="post">
-      Id kegiatan : <input type="text" name="id_kegiatan" placeholder="Id kegiatan"><br />
-      Kategori kegiatan : <input type="text" name="kategori_kegiatan" placeholder="kategori"><br />
-      Tempat kegiatan : <input type="text" name="tempat_kegiatan" placeholder="tempat"><br />
-      Sasaran kegiatan : <input type="text" name="sasaran_kegiatan" placeholder="sasaran"><br />
-      Jumlah peserta kegiatan : <input type="text" name="jml_peserta_kegiatan" placeholder="jumlah"><br />
-      Biaya kegiatan : <input type="text" name="biaya_kegiatan" placeholder="biaya"><br />
-      Keterangan kegiatan : <input type="number" name="keterangan_kegiatan" placeholder="Keterangan"><br />
-      Id petugas : <input type="text" name="id_petugas" placeholder="Id petugas"><br />
-      <input type="submit" name="tambah" value="tambah">
+      <div class="form-group">
+      <label id="name-label" for="name">ID Kegiatan</label>
+      <input 
+      type="text" 
+      name="id_kegiatan"
+      class="form-control" 
+      placeholder="id kegiatan"
+      required 
+      />
+
+    </div>
+
+      <div class="form-group">
+      <label id="name-label" for="name">Kategori Kegiatan</label>
+      <select 
+      type="text" 
+      name="jenis_kelamin"
+      class="form-control" 
+      required>
+      <option value="Kegiatan_Advokasi">Kegiatan Advokasi</option>
+      <option value="Kegiatan_Pengelolaan_Informasi_&_Edukasi_P4GN">Kegiatan Pengelolaan Informasi & Edukasi P4GN</option>
+      <option value="Kegiatan_Pemberdayaan_Masyarakat">Kegiatan Pemberdayaan Masyarakat</option>
+      </select>
+
+    </div>
+      
+      <div class="form-group">
+      <label id="name-label" for="name">Tempat Kegiatan</label>
+      <input 
+      type="text" 
+      name="tempat_kegiatan"
+      class="form-control" 
+      placeholder="tempat"
+      required 
+      />
+
+    </div>
+
+      <div class="form-group">
+      <label id="name-label" for="name">Sasaran Kegiatan</label>
+      <input 
+      type="text" 
+      name="sasaran_kegiatan"
+      class="form-control" 
+      placeholder="sasaran"
+      required 
+      />
+
+    </div>
+
+      <div class="form-group">
+      <label id="name-label" for="name">Jumlah Peserta Kegiatan</label>
+      <input 
+      type="text" 
+      name="jml_peserta_kegiatan"
+      class="form-control" 
+      placeholder="jumlah"
+      required 
+      />
+
+    </div>
+      
+      <div class="form-group">
+      <label id="name-label" for="name">Biaya Kegiatan</label>
+      <input 
+      type="varchar" 
+      name="biaya_kegiatan"
+      class="form-control" 
+      placeholder="biaya"
+      required 
+      />
+
+    </div>
+
+      <div class="form-group">
+      <label id="name-label" for="name">Keterangan Kegiatan</label>
+      <input 
+      type="text" 
+      name="keterangan_kegiatan"
+      class="form-control" 
+      placeholder="keterangan"
+      required 
+      />
+
+    </div>
+
+      <div class="form-group">
+      <label id="name-label" for="name">ID Petugas</label>
+      <input 
+      type="text" 
+      name="id_petugas"
+      class="form-control" 
+      placeholder="id petugas"
+      required 
+      />
+
+    </div>
+      <div class="form-group">
+      <button type="submit" name="tambah" class="submit-button" value="tambah">
+        TAMBAH
+      </button>    
     </form>
   </body>
 </html>

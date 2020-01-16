@@ -38,10 +38,10 @@ if($_SESSION['status'] !="login"){
       <div class="form-group">
       <label id="name-label" for="name">Tanggal SKKGB</label>
       <input 
-      type="number" 
+      type="datetime" 
       name="tanggal_skkgb"
       class="form-control" 
-      placeholder="00-00-0000"
+      placeholder="yy-dd-mmmm"
       required 
       />
 

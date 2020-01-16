@@ -15,6 +15,6 @@
     }else {
       $con= mysqli_query($koneksi, "INSERT INTO tb_kegiatan (id_kegiatan, kategori_kegiatan, tempat_kegiatan, sasaran_kegiatan, jml_peserta_kegiatan, biaya_kegiatan, keterangan_kegiatan, id_petugas)
       values ('$id_kegiatan','$kategori_kegiatan','$tempat_kegiatan','$sasaran_kegiatan','$jml_peserta_kegiatan','$biaya_kegiatan','$keterangan_kegiatan','$id_petugas')");
-      echo "<script>alert('terima kasih, data berhasil di masukkan');window.location='../divisi_pemberantasan.php'</script>";
+      echo "<script>alert('terima kasih, data berhasil di masukkan');window.location='../divisi_p2m.php'</script>";
     }
  ?>

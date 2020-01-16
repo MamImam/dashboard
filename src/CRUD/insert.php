@@ -40,7 +40,7 @@ if($_SESSION['status'] !="login"){
         type="text"
         name="id_lkn"
         class="form-control"
-        placeholder="Id lkn"
+        placeholder="Masukkan Nomer LKN"
         required
       />
 
@@ -49,7 +49,7 @@ if($_SESSION['status'] !="login"){
     <div class="form-group">
       <label id="email-label" for="email">Tanggal</label>
       <input
-        type="text"
+        type="date"
         name="tgl_lkn"
         class="form-control"
         placeholder="00-00-0000"
@@ -64,18 +64,29 @@ if($_SESSION['status'] !="login"){
         type="text" 
         name="tkp_lkn"
         class="form-control" 
-        placeholder="tkp"
+        placeholder="Lokasi TKP"
         required
         />
     </div>
       
+      <div class="form-group">
+      <label id="email-label" for="email">Nama tersangka</label>
+      <input
+        type="text" 
+        name="nama_tsk"
+        class="form-control" 
+        placeholder="Masukkan Nama Tersangka"
+        required
+        />
+    </div>
+
       <div class="form-group">
       <label id="email-label" for="email">Pasal</label>
       <input 
         type="text" 
         name="pasal_lkn"
         class="form-control" 
-        placeholder="pasal"
+        placeholder="Masukkan Pasal"
         required
         />
     </div>
@@ -86,7 +97,7 @@ if($_SESSION['status'] !="login"){
         type="text" 
         name="modus_operandi_lkn"
         class="form-control" 
-        placeholder="modus"
+        placeholder="Masukkan Modus Tersangka"
         required
         />
     </div>
@@ -97,7 +108,7 @@ if($_SESSION['status'] !="login"){
         type="number" 
         name="jumlah_bb_lkn"
         class="form-control" 
-        placeholder="jumlah "
+        placeholder="Masukkan Jumlah Barang Bukti "
         required
         />
     </div>
@@ -119,7 +130,7 @@ if($_SESSION['status'] !="login"){
         type="text" 
         name="asal_barang_lkn"
         class="form-control" 
-        placeholder="asal"
+        placeholder="Masukkan Asal Barang Bukti"
         required
         />
     </div>
@@ -163,5 +174,3 @@ if($_SESSION['status'] !="login"){
     </form>
   </body>
 </html>
-
-

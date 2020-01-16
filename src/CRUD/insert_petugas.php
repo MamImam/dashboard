@@ -7,22 +7,62 @@ if($_SESSION['status'] !="login"){
   header("location:index.php");
 }
 
-// menampilkan pesan selamat datang
-echo "Hai, selamat datang ". $_SESSION['username'];
  ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>data Petugas</title>
-  </head>
+  <link rel="stylesheet" type="text/css" href="../css/styleform.css">
+  <div class="container">
+   <header class="header">
+    <title>Badan Narkotika Nasional</title>
+    <link rel="icon" type="image/ico" href="./img/Logo_BNN.png" sizes="any" />
+
+    <!--<h1 id="title" class="text-center"></h1>-->
+    <p id="description" class="description text-center">  
+      Silahkan Masukkan Nama Petugas!
+    </p>
+  </header>
   <body>
     <form class="" action="input_petugas.php" method="post">
-      Id petugas : <input type="text" name="id_petugas" placeholder="Id petugas"><br />
-      Username petugas : <input type="text" name="username_petugas" placeholder="username"><br />
-      Nama petugas : <input type="text" name="nama_petugas" placeholder="nama"><br />
-      <input type="submit" name="tambah" value="tambah">
+      <div class="form-group">
+      <label id="name-label" for="name">ID Petugas</label>
+      <input 
+      type="int" 
+      name="id_petugas"
+      class="form-control"
+      placeholder="Masukkan ID Petugas"
+      required 
+      />
+    </div>
+
+    <div class="form-group">
+      <label id="name-label" for="name">Username Petugas</label>
+      <input 
+      type="text" 
+      name="username_petugas"
+      class="form-control"
+      placeholder="Masukkan Username Petugas" 
+      required
+      />
+    </div>
+
+    <div class="form-group">
+      <label id="name-label" for="name">Nama Petugas</label>
+      <input 
+      type="text" 
+      name="nama_petugas"
+      class="form-control" 
+      placeholder="Masukkan Nama Petugas"
+      required
+      />    
+    </div>
+
+  </div>
+
+      <div class="form-group">
+      <button type="submit" name="tambah" class="submit-button" value="tambah">
+        TAMBAH
+      </button>
     </form>
   </body>
 </html>

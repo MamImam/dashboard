@@ -36,6 +36,18 @@ if($_SESSION['status'] !="login"){
     </div>
 
     <div class="form-group">
+      <label id="name-label" for="name">Nama Tersangka</label>
+      <input 
+      type="text" 
+      name="alamat_tsk"
+      class="form-control" 
+      placeholder="Masukkan Nama Tersangka"
+      required 
+      />
+
+    </div>
+
+    <div class="form-group">
       <label id="name-label" for="name">Alamat Tersangka</label>
       <input 
       type="text" 
@@ -74,10 +86,10 @@ if($_SESSION['status'] !="login"){
     <div class="form-group">
       <label id="name-label" for="name">Tempat Tanggal Lahir</label>
       <input 
-      type="text" 
+      type="datetime" 
       name="ttl_tsk"
       class="form-control" 
-      placeholder="00-00-0000"
+      placeholder="yy-dd-mmmm"
       required 
       />
 

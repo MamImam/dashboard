@@ -5,7 +5,7 @@
   $username_petugas=$_POST['username_petugas'];
   $nama_petugas=$_POST['nama_petugas'];
   if ($id_petugas==null || $username_petugas==null || $nama_petugas==null) {
-    echo "<script>alert('silahkan lengkapi data');window.location='insert_petugas.php'</script>";
+    echo "<script>alert('silahkan lengkapi data');window.location='insert_petugas_rehab.php'</script>";
     }else {
       $con= mysqli_query($koneksi, "INSERT INTO tb_petugas (id_petugas, username_petugas, nama_petugas)
       values ('$id_petugas','$username_petugas','$nama_petugas')");
