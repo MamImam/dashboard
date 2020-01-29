@@ -17,24 +17,13 @@ if($_SESSION['status'] !="login"){
     <title>Badan Narkotika Nasional</title>
     <link rel="icon" type="image/ico" href="./img/Logo_BNN.png" sizes="any" />
 
-    <h1 id="title" class="text-center">DIVISI REBABILITASI</h1>
+    <h1 id="title" class="text-center">DIVISI REHABILITASI</h1>
     <p id="description" class="description text-center">
       Silahkan Masukkan Data!
     </p>
   </header>
   <body>
     <form class="" action="input_rehab.php" method="post">
-      <div class="form-group">
-      <label id="name-label" for="name">Id Registrasi Klien</label>
-      <input 
-      type="number" 
-      name="id_registrasi_klien"
-      class="form-control" 
-      placeholder="Masukkan Id Klien"
-      required 
-      />
-
-    </div>
 
       <div class="form-group">
       <label id="name-label" for="name">Nama Klien</label>
@@ -144,30 +133,6 @@ if($_SESSION['status'] !="login"){
       name="kecamatan"
       class="form-control" 
       placeholder="Wilayah Kecamatan"
-      required 
-      />
-
-    </div>
-
-      <div class="form-group">
-      <label id="name-label" for="name">ID Barang Bukti</label>
-      <input 
-      type="text" 
-      name="id_bb"
-      class="form-control" 
-      placeholder="Id Barang Bukti"
-      required 
-      />
-
-    </div>
-
-      <div class="form-group">
-      <label id="name-label" for="name">ID Petugas</label>
-      <input 
-      type="text" 
-      name="id_petugas"
-      class="form-control" 
-      placeholder="Id Petugas"
       required 
       />
 

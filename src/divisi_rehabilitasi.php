@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+// cek apakah user telah login, jika belum login maka di alihkan ke halaman login
+if($_SESSION['status'] !="login"){
+header("location:login.php");
+}
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,7 +101,44 @@
                     <h5 class="card-category"></h5>
                     <h2 class="card-title"></h2>
                   </div>
-                  
+
+                     <table border="3">
+                       <tr>
+                         
+                         <th>Id Registrasi klien</th>
+                         <th>Nama klien</th>
+                         <th>ttl</th>
+                         <th>Usia</th>
+                         <th>No identitas</th>
+                         <th>Pendidikan terakhir</th>
+                         <th>Pekerjaan</th>
+                         <th>Tempat rehab</th>
+                         <th>Hasil dari</th>
+                         <th>Kecamatan</th>
+                         <th colspan="2"> aksi</th>
+                       </tr>
+                       <?php
+                  require_once 'CRUD/koneksi.php';
+                  $con=mysqli_query($koneksi, "SELECT*FROM tb_rehab");
+                  while ($data =mysqli_fetch_array($con)) {
+                  ?>
+                  <tr>
+                    <td><?php echo $data['id_registrasi_klien']?></td>
+                    <td><?php echo $data['nama_klien']?></td>
+                    <td><?php echo $data['ttl']?></td>
+                    <td><?php echo $data['usia']?></td>
+                    <td><?php echo $data['no_identitas']?></td>
+                    <td><?php echo $data['pendidikan_terakhi']?></td>
+                    <td><?php echo $data['pekerjaan']?></td>
+                    <td><?php echo $data['tempat_rehab']?></td>
+                    <td><?php echo $data['hasil_dari']?></td>
+                    <td><?php echo $data['kecamatan']?></td>
+                    <td><a href="CRUD/hapus_rehab.php?d=<?= $data['id_registrasi_klien'] ?>">Hapus</a> || <a href="CRUD/edit_rehab.php?d=<?= $data['id_registrasi_klien'] ?>">Edit</a></td>
+                  </tr>
+                <?php } ?>
+
+                   </div>
+              </table>
                   <!-- tabel input divisi umum -->
                      
                 </div>

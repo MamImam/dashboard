@@ -92,10 +92,44 @@
                     <h2 class="card-title"></h2>
                   </div>
                   
-                  <!-- tabel input divisi umum -->
-                     
+                  <?php
+                     require './CRUD/koneksi.php';
+
+                     if(isset($_GET['cari']))
+                     ?>
+
+                     <table border="3">
+                       <tr>
+                         
+                         <th>ID Kegiatan</th>
+                         <th>Kategori Kegiatan</th>
+                         <th>Tempat Kegiatan</th>
+                         <th>Sasaran Kegiatan</th>
+                         <th>Jumlah Peserta Kegiatan</th>
+                         <th>Biaya Kegiatan</th>
+                         <th>Keterangan Kegiatan</th>
+                         <th colspan="2"> aksi</th>
+                       </tr>
+                       <?php
+                  require_once 'CRUD/koneksi.php';
+                  $con=mysqli_query($koneksi, "SELECT*FROM tb_kegiatan");
+                  while ($data =mysqli_fetch_array($con)) {
+                  ?>
+                  <tr>
+                    <td><?php echo $data['id_kegiatan']?></td>
+                    <td><?php echo $data['kategori_kegiatan']?></td>
+                    <td><?php echo $data['tempat_kegiatan']?></td>
+                    <td><?php echo $data['sasaran_kegiatan']?></td>
+                    <td><?php echo $data['jml_peserta_kegiatan']?></td>
+                    <td><?php echo $data['biaya_kegiatan']?></td>
+                    <td><?php echo $data['keterangan_kegiatan']?></td>
+                    <td><?php echo $data['id_petugas']?></td>
+                    <td><a href="CRUD/hapus_lkn.php?d=<?= $data['id_lkn'] ?>">Hapus</a> || <a href="CRUD/edit_lkn.php?d=<?= $data['id_lkn'] ?>">Edit</a></td>
+                  </tr>
+                <?php } ?>
                 </div>
-              </div>
+              </table>
+              </div><!-- tabel input divisi umum -->
               <div class="card-body">
                 <div class="chart-area">
                   <canvas id="chartBig1"></canvas>

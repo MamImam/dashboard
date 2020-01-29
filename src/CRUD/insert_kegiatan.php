@@ -24,6 +24,7 @@ if($_SESSION['status'] !="login"){
   </header>
   <body>
     <form class="" action="input_kegiatan.php" method="post">
+      
       <div class="form-group">
       <label id="name-label" for="name">ID Kegiatan</label>
       <input 
@@ -40,7 +41,7 @@ if($_SESSION['status'] !="login"){
       <label id="name-label" for="name">Kategori Kegiatan</label>
       <select 
       type="text" 
-      name="jenis_kelamin"
+      name="kategori_kegiatan"
       class="form-control" 
       required>
       <option value="Kegiatan_Advokasi">Kegiatan Advokasi</option>
@@ -110,17 +111,7 @@ if($_SESSION['status'] !="login"){
 
     </div>
 
-      <div class="form-group">
-      <label id="name-label" for="name">ID Petugas</label>
-      <input 
-      type="text" 
-      name="id_petugas"
-      class="form-control" 
-      placeholder="id petugas"
-      required 
-      />
-
-    </div>
+  
       <div class="form-group">
       <button type="submit" name="tambah" class="submit-button" value="tambah">
         TAMBAH

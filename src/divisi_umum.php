@@ -35,18 +35,6 @@
               <p><h4>Data Pegawai</h4></p>
             </a>
           </li>
-          <li>
-            <a href="./CRUD/insert_skkp.php">
-              <i class="tim-icons icon-atom"></i>
-              <p><h4>SKKP</h4></p>
-            </a>
-          </li>
-          <li>
-            <a href="./CRUD/insert_skkgb.php">
-              <i class="tim-icons icon-bell-55"></i>
-              <p><h4>SKKGB</h4></p>
-            </a>
-          </li>
         </ul>
       </div>
     </div>
@@ -65,6 +53,15 @@
               </button>
             </div>
             <a class="navbar-brand" href="divisi_umum.php">BNNK SURABAYA</a>
+          <li class="nav-item px-5">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item px-5">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item px-5">
+          <a class="nav-link" href="./CRUD/input_tsk.php">Laporan Data Pegawai</a>
+        </li>
           </div>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -103,6 +100,49 @@
                     <h5 class="card-category"></h5>
                     <h2 class="card-title"></h2>
                   </div>
+
+
+                  <table border="3">
+                       <tr>
+                         
+                         <th>NIP</th>
+                         <th>Nama pegawai</th>
+                         <th>Tempat tanggal lahir</th>
+                         <th>Jenis kelamin</th>
+                         <th>Alamat</th>
+                         <th>Agama</th>
+                         <th>Divisi pegawai</th>
+                         <th>Masa kerja pegawai</th>
+                         <th>Tanggal pengangkatan</th>
+                         <th>Pangkat golongan</th>
+                         <th>Jabatan</th>
+                         <th>Gaji pokok pegawai</th>
+                         <th colspan="2"> aksi</th>
+                       </tr>
+                       <?php
+                  require_once 'CRUD/koneksi.php';
+                  $con=mysqli_query($koneksi, "SELECT*FROM tb_data_pegawai");
+                  while ($data =mysqli_fetch_array($con)) {
+                  ?>
+                  <tr>
+                    <td><?php echo $data['nip']?></td>
+                    <td><?php echo $data['nama_pegawai']?></td>
+                    <td><?php echo $data['ttl']?></td>
+                    <td><?php echo $data['jenis_kelamin']?></td>
+                    <td><?php echo $data['alamat']?></td>
+                    <td><?php echo $data['agama']?></td>
+                    <td><?php echo $data['divisi_pegawai']?></td>
+                    <td><?php echo $data['masa_kerja_pegawai']?></td>
+                    <td><?php echo $data['tgl_pengangkatan']?></td>
+                    <td><?php echo $data['pangkat_golongan']?></td>
+                    <td><?php echo $data['jabatan']?></td>
+                    <td><?php echo $data['gaji_pokok_pegawai']?></td>
+                  </tr>
+                <?php } ?>
+
+                   </div>
+              </table>
+               
                   
                   <!-- tabel input divisi umum -->
                      

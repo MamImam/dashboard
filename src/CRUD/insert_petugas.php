@@ -24,16 +24,17 @@ if($_SESSION['status'] !="login"){
   </header>
   <body>
     <form class="" action="input_petugas.php" method="post">
+      
       <div class="form-group">
-      <label id="name-label" for="name">ID Petugas</label>
-      <input 
-      type="int" 
-      name="id_petugas"
-      class="form-control"
-      placeholder="Masukkan ID Petugas"
-      required 
-      />
-    </div>
+        <label id="name-label" for="name">ID Petugas</label>
+        <input 
+        type="int" 
+        name="id_petugas"
+        class="form-control"
+        placeholder="Masukkan ID Petugas"
+        required 
+        />
+      </div>
 
     <div class="form-group">
       <label id="name-label" for="name">Username Petugas</label>
@@ -57,12 +58,11 @@ if($_SESSION['status'] !="login"){
       />    
     </div>
 
-  </div>
-
-      <div class="form-group">
-      <button type="submit" name="tambah" class="submit-button" value="tambah">
+     <div class="form-group">
+      <button type="submit" name="tambah" class="submit-button" class="form-control" value="tambah">
         TAMBAH
       </button>
-    </form>
+
+  </form>
   </body>
 </html>

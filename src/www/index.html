@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel='shortcut icon' type='image/x-icon' href='./img/dpw.png' />
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="./js/popper.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("button").click(function(){
+          alert("Welcome! " + $("#zou").val());
+        });
+      });
+    </script>
+  </head>
+  <body><tt><center>
+    <div class="container" style="padding:30px;">
+      <div class="row">
+        <div class="col-sm-12 text-center" style="background-color:lavender;"><h1 class="blink">WELCOME</h1></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2" style="background-color:lavenderblush;">&nbsp;</div>
+        <div class="col-sm-8 table-responsive-sm" style="background-color:lavender;padding:50px">
+          <table class="text-center"><center>
+            <tr>
+              <td>Name</td>
+              <td>:</td>
+              <td><input type="text" name="urname" placeholder="ur name, please" id="zou" class="form-control" data-toggle="tooltip" data-placement="right" title="Hello!" /></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td><a href="map.html"><button type="button" name="button" class="btn btn-outline-success">MASUK</button></a></td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-sm-2" style="background-color:lavenderblush;">&nbsp;</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12" style="background-color:lavender"><h1>&nbsp;</h1></div>
+      </div>
+      <div class="modal-footer">
+        &copy; Kelompok 1 - MobileComputing 2019
+      </div>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+  </body>
+</html>

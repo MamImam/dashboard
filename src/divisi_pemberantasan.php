@@ -28,10 +28,16 @@ header("location:login.php");
   <link href="../src/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../src/demo/demo.css" rel="stylesheet" />
+  <style type="text/css">
+    ul li{
+      list-style-type: none;
+    }
+  </style>
 </head>
 
 <body class="">
   <div class="wrapper">
+
     <div class="sidebar">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
@@ -81,7 +87,27 @@ header("location:login.php");
               </button>
             </div>
             <a class="navbar-brand" href="divisi_pemberantasan.php">BNNK SURABAYA</a>
+        <li class="nav-item px-5">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item px-5">
+          <a class="nav-link"></a>
+        </li>
+        
+        <li class="nav-item px-3">
+          <a class="nav-link" href="divisi_pemberantasan.php">Laporan Kasus Narkotika</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="./CRUD/tampil_tsk.php">Laporan Tersangka</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="./CRUD/tampil_bb.php">Laporan Barang Bukti</a>
+        </li>
+        <li class="nav-item px-5">
+          <a class="nav-link" href="www/lokasi_kejadian.html">MAPS</a>
+        </li>
           </div>
+
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>

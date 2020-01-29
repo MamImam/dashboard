@@ -39,7 +39,7 @@ if($_SESSION['status'] !="login"){
       <label id="name-label" for="name">Nama Tersangka</label>
       <input 
       type="text" 
-      name="alamat_tsk"
+      name="nama_tsk"
       class="form-control" 
       placeholder="Masukkan Nama Tersangka"
       required 

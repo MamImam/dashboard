@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Update</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" type="text/css" href="../css/styleform.css">
+<div class="container">
+  <header class="header">
+    <title>Badan Narkotika Nasional</title>
+    <link rel="icon" type="image/ico" href="./img/Logo_BNN.png" sizes="any" />
+
+    <h1 id="title" class="text-center">DIVISI P2M</h1>
+    <p id="description" class="description text-center">
+      Silahkan Edit Data!
+    </p>
+  </header>
 <body>
 
-	<a href="halaman_utama.php">Lihat Semua Data</a>
-
+	<center> <a href="../divisi_p2m.php" style="color: white">Lihat Semua Data</a> </center>
 	<br/>
-	<h3>Edit data</h3>
 
 	<?php
     require_once 'koneksi.php';
@@ -18,48 +23,107 @@
     while ($data =mysqli_fetch_array($con)) {
     ?>
 	<form action="update_kegiatan.php" method="post">
-		<table>
-      <tr>
-				<td>Id</td>
-				<td>
-					<input type="text" name="id_kegiatan" value="<?php echo $data['id_kegiatan'] ?>" readonly>
-				</td>
-			</tr>
-			<tr>
-				<td>Kategori kegiatan</td>
-				<td>
-					<input type="text" name="kategori_kegiatan" value="<?php echo $data['kategori_kegiatan'] ?>">
-				</td>
-			</tr>
-			<tr>
-				<td>Tempat kegiatan</td>
-				<td><input type="text" name="tempat_kegiatan" value="<?php echo $data['tempat_kegiatan'] ?>"></td>
-			</tr>
-			<tr>
-				<td>Sasaran kegiatan</td>
-				<td><input type="text" name="sasaran_kegiatan" value="<?php echo $data['sasaran_kegiatan'] ?>"></td>
-			</tr>
-      <tr>
-				<td>jumlah peserta kegiatan</td>
-				<td><input type="text" name="jml_peserta_kegiatan" value="<?php echo $data['jml_peserta_kegiatan'] ?>"></td>
-			</tr>
-      <tr>
-				<td>Biaya kegiatan</td>
-				<td><input type="text" name="biaya_kegiatan" value="<?php echo $data['biaya_kegiatan'] ?>"></td>
-			</tr>
-		<tr>
-				<td>Keterangan kegiatan</td>
-				<td><input type="text" name="Keterangan_kegiatan" value="<?php echo $data['Keterangan_kegiatan'] ?>"></td>
-			</tr>
-			<tr>
-				<td>Id petugas</td>
-				<td><input type="text" name="id_petugas" value="<?php echo $data['id_petugas'] ?>"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="Simpan"></td>
-			</tr>
-		</table>
+		<div class="form-group">
+      		<label id="name-label" for="name">Id</label>
+      		<input
+        	type="text"
+        	name="id_kegiatan"
+        	class="form-control"
+        	value="<?php echo $data['id_kegiatan'] ?>"
+        	readonly
+      	/>
+		
+		</div>
+
+		<div class="form-group">
+      		<label id="name-label" for="name">Kategori kegiatan</label>
+      		<input
+        	type="text"
+        	name="kategori_kegiatan"
+        	class="form-control"
+        	value="<?php echo $data['kategori_kegiatan'] ?>"
+        	required
+      	/>
+		
+		</div>
+
+		<div class="form-group">
+      		<label id="name-label" for="name">Tempat kegiatan</label>
+      		<input
+        	type="text"
+        	name="tempat_kegiatan"
+        	class="form-control"
+        	value="<?php echo $data['tempat_kegiatan'] ?>"
+        	required
+      	/>
+		
+		</div>
+
+		<div class="form-group">
+      		<label id="name-label" for="name">Sasaran kegiatan</label>
+      		<input
+        	type="text"
+        	name="sasaran_kegiatan"
+        	class="form-control"
+        	value="<?php echo $data['sasaran_kegiatan'] ?>"
+        	required
+      	/>
+		
+		</div>
+
+		<div class="form-group">
+      		<label id="name-label" for="name">jumlah peserta kegiatan</label>
+      		<input
+        	type="text"
+        	name="jml_peserta_kegiatan"
+        	class="form-control"
+        	value="<?php echo $data['jml_peserta_kegiatan'] ?>"
+        	required
+      	/>
+		
+		</div>
+
+		<div class="form-group">
+      		<label id="name-label" for="name">Biaya kegiatan</label>
+      		<input
+        	type="text"
+        	name="biaya_kegiatan"
+        	class="form-control"
+        	value="<?php echo $data['biaya_kegiatan'] ?>"
+        	required
+      	/>
+		
+		</div>
+		
+		<div class="form-group">
+      		<label id="name-label" for="name">Keterangan kegiatan</label>
+      		<input
+        	type="text"
+        	name="Keterangan_kegiatan"
+        	class="form-control"
+        	value="<?php echo $data['Keterangan_kegiatan'] ?>"
+        	required
+      	/>
+		
+		</div>
+		
+		<div class="form-group">
+      		<label id="name-label" for="name">Id petugas</label>
+      		<input
+        	type="text"
+        	name="id_petugas"
+        	class="form-control"
+        	value="<?php echo $data['id_petugas'] ?>"
+        	required
+      	/>
+		
+		</div>
+		
+		<div class="form-group">
+      <button type="submit" name="tambah" class="submit-button" value="tambah">
+        TAMBAH
+      </button>
+      
 	</form>
 	<?php } ?>
 </body>

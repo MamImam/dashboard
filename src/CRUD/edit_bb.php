@@ -1,15 +1,20 @@
- <!DOCTYPE html>
-<html>
-<head>
-	<title>Update</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" type="text/css" href="../css/styleform.css">
+<div class="container">
+  <header class="header">
+    <title>Badan Narkotika Nasional</title>
+    <link rel="icon" type="image/ico" href="./img/Logo_BNN.png" sizes="any" />
+
+    <h1 id="title" class="text-center">DIVISI BERANTAS</h1>
+    <p id="description" class="description text-center">
+      Silahkan Edit Data!
+    </p>
+  </header>
 <body>
 
-	<a href="halaman_admin.php">Lihat Semua Data</a>
-
+	<center> <a href="../divisi_pemberantasan.php" style="color: white">Lihat Semua Data</a> </center>
 	<br/>
-	<h3>Edit data</h3>
 
 	<?php
     require_once 'koneksi.php';
@@ -17,27 +22,48 @@
     $con=mysqli_query($koneksi, "SELECT*FROM tb_bb where id_bb='$d'");
     while ($data =mysqli_fetch_array($con)) {
     ?>
-	<form action="edit_bb.php" method="post">
-		<table>
-			<tr>
-				<td>ID Barang Bukti</td>
-				<td>
-					<input type="text" name="id_bb" value="<?php echo $data['id_bb'] ?>">
-				</td>
-			</tr>
-			<tr>
-				<td>Nama Barang Bukti</td>
-				<td><input type="text" name="nama_bb" value="<?php echo $data['nama_bb'] ?>"></td>
-			</tr>
-			<tr>
-				<td>Jenis Barang Bukti</td>
-				<td><input type="text" name="jenis_bb" value="<?php echo $data['jenis_bb'] ?>"></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="Simpan"></td>
-			</tr>
-		</table>
+	<form action="update_bb.php" method="post">
+		<div class="form-group">
+      		<label id="name-label" for="name">ID Barang Bukti</label>
+      		<input
+        	type="text"
+        	name="id_bb"
+        	class="form-control"
+        	value="<?php echo $data['id_bb'] ?>"
+        	readonly
+      	/>
+		
+		</div>
+
+		<div class="form-group">
+      		<label id="name-label" for="name">Nama Barang Bukti</label>
+      		<input
+        	type="text"
+        	name="nama_bb"
+        	class="form-control"
+        	value="<?php echo $data['nama_bb'] ?>"
+        	required
+      	/>
+		
+		</div>
+		
+		<div class="form-group">
+      		<label id="name-label" for="name">Jenis Barang Bukti</label>
+      		<input
+        	type="text"
+        	name="jenis_bb"
+        	class="form-control"
+        	value="<?php echo $data['jenis_bb'] ?>"
+        	required
+      	/>
+		
+		</div>
+		
+		<div class="form-group">
+      <button type="submit" name="tambah" class="submit-button" value="tambah">
+        TAMBAH
+      </button>
+      		
 	</form>
 	<?php } ?>
 </body>
